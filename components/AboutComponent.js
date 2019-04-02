@@ -1,44 +1,25 @@
 import React, { Component } from 'react';
 import { ScrollView, View, Text, FlatList } from 'react-native';
 import { Card, ListItem } from 'react-native-elements';
-//import { ABOUT } from '../shared/textData';
-import { LEADERS } from '../shared/leaders';
+import { connect } from 'react-redux';
+import { baseUrl } from '../shared/baseUrl';
 
-const Leaders = (props) => {
-
-    const renderLeaders = ({ item, index }) => {
-        return (
-            <ListItem
-                key={index}
-                title={item.name}
-                subtitle={item.description}
-                hideChevron={true}
-                leftAvatar={{ source: require('./images/uthappizza.png') }}
-            />
-        )
-    };
-
-    return (
-        <Card title='Corporate Leadership'>
-            <FlatList
-                data={props.leaders}
-                renderItem={renderLeaders}
-                keyExtractor={item => item.id.toString()}
-            />
-        </Card>
-    );
-};
+const mapStateToProps = state => {
+    return {
+        leaders: state.leaders
+    }
+}
 
 const History = () => {
     return (
         <View>
             <Card title="Our History">
                 <View>
-                    <Text>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong.
+                    <Text style={{ margin: 10 }} >Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong.
                         With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list
                         clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what
                         will arrive on your plate the next time you visit us.</Text>
-                    <Text style={{ paddingTop: 10 }}>The restaurant traces its humble beginnings to The Frying Pan, a successful chain started
+                    <Text style={{ margin: 10 }}>The restaurant traces its humble beginnings to The Frying Pan, a successful chain started
                         by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</Text>
                 </View>
             </Card>
@@ -46,20 +27,40 @@ const History = () => {
     );
 }
 
-class AboutComponent extends Component {
+class About extends Component {
 
     static navigationOptions = {
         title: 'About Us'
     }
 
     render() {
+        const { param } = this.props.navigation.state;
+        const renderLeader = ({ item, index }) => {
+            return (
+                <ListItem
+                    roundAvatar
+                    key={index}
+                    title={item.name}
+                    subtitle={item.description}
+                    subtitleNumberOfLines={15}
+                    hideChevron={true}
+                    leftAvatar={{ source: { uri: baseUrl + item.image } }}
+                />
+            );
+        };
         return (
             <ScrollView>
                 <History />
-                <Leaders leaders={LEADERS} />
+                <Card title='Corporate Leadership'>
+                    <FlatList
+                        data={this.props.leaders.leaders}
+                        renderItem={renderLeader}
+                        keyExtractor={item => item.id.toString()}
+                    />
+                </Card>
             </ScrollView>
         );
     }
 }
 
-export default AboutComponent;
+export default connect(mapStateToProps)(About);

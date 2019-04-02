@@ -1,0 +1,119 @@
+In this training, attendees will learn how to:
+
+·         Install and configure Jenkins in a servlet container
+·         Create Jenkins builds
+·         Configure and use Apache Ant and Apache Maven with Jenkins
+·         Use Jenkins to generate Java coding standards reports, code coverage reports, and change notices
+
+Prerequisites
+
+Attendees should have familiarity Java development practices.
+
+Outline of Jenkins Training: Continuous Integration with Jenkins for Developers and DevOps Initiatives
+
+
+Chapter 2. Configuring Jenkins
+
+·         Initial Configuration
+·         Configuration Wizard
+·         Configuration Wizard (cont'd)
+·         Configuring Tools
+·         Configuring Tools - Best Practices
+·         Logging in Jenkins
+·         Custom Log Recorders
+·         Summary
+Chapter 3. Job Types in Jenkins - SM + NR + JK + EB + IB
+
+·         Introduction
+·         Different types of Jenkins Items
+·         Different types of Jenkins Items (cont'd)
+·         Configuring Source Code Management(SCM)
+·         Working with Git
+·         Storing Credentials
+·         Service Accounts
+·         Storing Credentials (cont'd)
+·         Build Triggers
+·         Schedule Build Jobs
+·         Polling the SCM
+·         Polling vs Triggers
+·         Maven Build Steps
+·         Summary
+Chapter 4. Advanced Jobs - SM + NR + JK + EB + IB
+
+·         Parameterized Jobs
+·         Built-in Environment Variables
+·         Parameter Types
+·         Defining Parameters
+·         Using Parameters / Environment Variables
+·         Parameters in the config.xml File
+·         Launching a Build with Parameters
+·         Configuration Matrix
+·         Configuration Matrix – Example
+·         Defining Configuration Matrix
+·         Monitoring External Jobs
+·         Summary
+Chapter 5. Non-Java Jenkins Jobs -SM + NR + JK + EB + IB
+
+·         Jenkins Jobs
+·         Non-Java Jobs
+·         Creating a Jenkins Job and Specify a Build Step
+·         Specifying a Step for Running Unit Tests
+·         Building a Node.js Application with Jenkins
+·         Node.js Plugin
+·         Executing PowerShell Scripts with Jenkins
+·         Summary
+Chapter 6. Template Jobs - SM + NR + JK + EB + IB
+
+·         Template Jobs
+·         Template Jobs (Contd.)
+·         Template Jobs Plugin
+·         Template Jobs Plugin - config.xml
+·         Summary
+Chapter 7. Continuous Delivery and the Jenkins Pipeline
+·         The Pipeline Plugin
+·         The Pipeline Plugin (cont'd)
+·         Defining a Pipeline
+·         A Pipeline Example
+·         Pipeline Example (cont'd)
+·         Parallel Execution
+·         Creating a Pipeline
+·         Invoking the Pipeline
+·         Interacting with the Pipeline
+·         Pipeline vs Traditional Jobs
+·         Conclusion
+
+Chapter 10. Jenkins Plugins
+
+·         Introduction
+·         Jenkins Plugins - SCM
+·         Jenkins Plugins – Build and Test
+·         Jenkins Plugins – Analyzers
+·         Jenkins for Teams
+·         Installing/Uninstall/Upgrade Jenkins Plugins
+·         Summary
+Chapter 11. Distributed Builds with Jenkins
+
+·         Distributed Builds - Overview
+·         Distributed Builds – How?
+·         Agent Machines
+·         Configure Jenkins Master
+·         Configure Projects
+·         Conclusion
+Chapter 12. Containerized Builds
+·         Configuring Command Prompt to Connect to Docker
+·         Creating Docker Container from Jenkins Job
+·         Test Custom Image Created by a Jenkins Job
+·         The Jenkins Docker Build Step Plugin
+·         Ephemeral Build Agents
+·         Summary
+
+Chapter 16. Best Practices for Jenkins - SM + NR + JK + EB + IB
+
+·         Best Practices - Secure Jenkins
+·         Best Practices - Users
+·         Best Practices - Backups
+·         Best Practices - Reproducible Builds
+·         Best Practices - Testing and Reports
+·         Best Practices - Large Systems
+·         Best Practices - Distributed Jenkins
+·         Best Practices - Summary
